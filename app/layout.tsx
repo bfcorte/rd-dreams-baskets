@@ -14,8 +14,13 @@ export const metadata: Metadata = {
   },
 }
 
-// Root layout: html/body are provided by each [locale]/layout.tsx
-// This pattern is required for next-intl locale-specific lang attributes
+// Root layout MUST provide <html> and <body> in Next.js 14 App Router.
+// suppressHydrationWarning allows locale-specific lang to be set client-side
+// without triggering a hydration mismatch warning.
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return children
+  return (
+    <html suppressHydrationWarning>
+      <body>{children}</body>
+    </html>
+  )
 }

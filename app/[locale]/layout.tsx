@@ -11,15 +11,11 @@ export async function generateMetadata({
   params: { locale: string }
 }): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'hero' })
-
   return {
     title: 'R&D Dreams & Baskets — Cozy Gifts, Handcrafted Joy',
     description: t('subheadline'),
     alternates: {
-      languages: {
-        'en-US': '/USA',
-        'pt-BR': '/BR',
-      },
+      languages: { 'en-US': '/USA', 'pt-BR': '/BR' },
     },
   }
 }
@@ -36,18 +32,31 @@ export default async function LocaleLayout({
   params: { locale: string }
 }) {
   if (!locales.includes(locale)) notFound()
-
   setRequestLocale(locale)
-
   const messages = await getMessages()
 
+  // Root layout already provides <html><body>.
+  // This layout only adds the i18n Provider + sets lang via script.
   return (
-    <html lang={locale === 'BR' ? 'pt-BR' : 'en-US'}>
-      <body>
-        <NextIntlClientProvider messages={messages}>
-          {children}
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <>
+      <LangSetter locale={locale} />
+      <NextIntlClientProvider messages={messages}>
+        {children}
+      </NextIntlClientProvider>
+    </>
+  )
+}
+
+// Sets the <html lang> attribute client-side to match the active locale.
+// Uses suppressHydrationWarning on <html> so this never causes a mismatch.
+function LangSetter({ locale }: { locale: string }) {
+  const lang = locale === 'BR' ? 'pt-BR' : 'en-US'
+  return (
+    <script
+      suppressHydrationWarning
+      dangerouslySetInnerHTML={{
+        __html: `document.documentElement.lang='${lang}'`,
+      }}
+    />
   )
 }
