@@ -1,0 +1,121 @@
+{
+  "nav": {
+    "baskets": "Baskets",
+    "howItWorks": "How It Works",
+    "contact": "Contact",
+    "orderWhatsApp": "Order via WhatsApp",
+    "switchLang": "PT"
+  },
+  "hero": {
+    "badge": "Handcrafted with Love • Central Florida",
+    "headline": "Moments Worth\nRemembering",
+    "subheadline": "Beautiful gift baskets & balloon arrangements for every occasion — because some moments deserve to be unforgettable.",
+    "ctaPrimary": "Order via WhatsApp",
+    "ctaSecondary": "Request a Custom Quote"
+  },
+  "products": {
+    "title": "Our Collections",
+    "subtitle": "Every basket is handcrafted with care, filled with premium items, and wrapped with love.",
+    "badge": {
+      "bestseller": "Best Seller",
+      "seasonal": "Seasonal",
+      "popular": "Popular"
+    },
+    "items": [
+      {
+        "id": "breakfast",
+        "name": "Breakfast Baskets",
+        "description": "Start their morning with warmth — coffee, pastries, fresh flowers, and a whole lot of love.",
+        "badge": "bestseller"
+      },
+      {
+        "id": "mothers-day",
+        "name": "Mother's Day",
+        "description": "Honor the woman who does it all with a basket as beautiful and extraordinary as she is.",
+        "badge": "seasonal"
+      },
+      {
+        "id": "birthday",
+        "name": "Birthday Celebrations",
+        "description": "Make every birthday extraordinary with a curated basket and balloon arrangement.",
+        "badge": null
+      },
+      {
+        "id": "custom",
+        "name": "Custom Arrangements",
+        "description": "Your vision, beautifully crafted. We build baskets around what makes them smile.",
+        "badge": "popular"
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Three simple steps to the perfect gift.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Choose Your Basket",
+        "description": "Browse our collections or describe your vision for a completely custom creation."
+      },
+      {
+        "number": "02",
+        "title": "Personalize It",
+        "description": "Add a handwritten note, choose a theme, or request specific items — we make it yours."
+      },
+      {
+        "number": "03",
+        "title": "Delivered with Love",
+        "description": "Receive your handcrafted basket, beautifully packaged and ready to create a lasting memory."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Request Your Basket",
+    "subtitle": "Tell us about the occasion and we'll create something beautiful together.",
+    "whatsappTitle": "Prefer WhatsApp?",
+    "whatsappDescription": "Send us a message directly and we'll respond right away.",
+    "whatsappCta": "Chat on WhatsApp",
+    "form": {
+      "name": "Your Name",
+      "namePlaceholder": "Jane Doe",
+      "email": "Email Address",
+      "emailPlaceholder": "jane@example.com",
+      "phone": "Phone Number",
+      "phonePlaceholder": "+1 (555) 000-0000",
+      "basketType": "Basket Type",
+      "basketTypePlaceholder": "Select a basket type",
+      "basketTypeOptions": {
+        "breakfast": "Breakfast Basket",
+        "mothers-day": "Mother's Day Basket",
+        "birthday": "Birthday Basket",
+        "custom": "Custom Arrangement"
+      },
+      "message": "Tell us about the occasion",
+      "messagePlaceholder": "Date, recipient name, preferences, budget, anything that helps us create something perfect...",
+      "submit": "Send Request",
+      "submitting": "Sending...",
+      "successTitle": "Request received!",
+      "successMessage": "We'll reach out within 24 hours to discuss the details.",
+      "errorMessage": "Something went wrong. Please try again or contact us via WhatsApp."
+    }
+  },
+  "footer": {
+    "tagline": "Cozy Gifts • Handcrafted Joy",
+    "description": "Handcrafted gift baskets & balloon arrangements for every occasion, delivered with love in Central Florida.",
+    "contact": "Contact",
+    "rights": "All rights reserved.",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "madeWith": "Made with"
+  },
+  "whatsapp": {
+    "tooltip": "Order via WhatsApp"
+  },
+  "validation": {
+    "nameRequired": "Name is required",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Enter a valid email address",
+    "basketTypeRequired": "Please select a basket type",
+    "messageRequired": "Please describe your occasion"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "nav": {
+    "baskets": "Cestas",
+    "howItWorks": "Como Funciona",
+    "contact": "Contato",
+    "orderWhatsApp": "Pedir pelo WhatsApp",
+    "switchLang": "EN"
+  },
+  "hero": {
+    "badge": "Feito com Amor • Central Florida",
+    "headline": "Momentos que Ficam\nna Memória",
+    "subheadline": "Cestas de presente e arranjos com balões para toda ocasião — porque alguns momentos merecem ser inesquecíveis.",
+    "ctaPrimary": "Pedir pelo WhatsApp",
+    "ctaSecondary": "Solicitar Orçamento"
+  },
+  "products": {
+    "title": "Nossas Coleções",
+    "subtitle": "Cada cesta é feita à mão com carinho, cheia de itens selecionados e entregue com amor.",
+    "badge": {
+      "bestseller": "Mais Vendido",
+      "seasonal": "Temporada",
+      "popular": "Popular"
+    },
+    "items": [
+      {
+        "id": "breakfast",
+        "name": "Cestas de Café da Manhã",
+        "description": "Comece a manhã deles com carinho — café, pães, flores frescas e muito amor.",
+        "badge": "bestseller"
+      },
+      {
+        "id": "mothers-day",
+        "name": "Dia das Mães",
+        "description": "Homenageie a mulher que faz tudo com uma cesta tão linda e especial quanto ela.",
+        "badge": "seasonal"
+      },
+      {
+        "id": "birthday",
+        "name": "Aniversários",
+        "description": "Torne cada aniversário inesquecível com uma cesta e arranjo de balões exclusivos.",
+        "badge": null
+      },
+      {
+        "id": "custom",
+        "name": "Pedidos Personalizados",
+        "description": "Sua visão, lindamente realizada. Montamos cestas pensando no que vai fazer a pessoa sorrir.",
+        "badge": "popular"
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Como Funciona",
+    "subtitle": "Três passos simples para o presente perfeito.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Escolha sua Cesta",
+        "description": "Navegue pelas nossas coleções ou descreva sua visão para uma criação totalmente personalizada."
+      },
+      {
+        "number": "02",
+        "title": "Personalize",
+        "description": "Adicione um bilhete escrito à mão, escolha um tema ou solicite itens específicos — deixamos do seu jeito."
+      },
+      {
+        "number": "03",
+        "title": "Entregamos com Amor",
+        "description": "Receba sua cesta artesanal, lindamente embalada e pronta para criar uma memória especial."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Solicite sua Cesta",
+    "subtitle": "Conta pra gente sobre a ocasião e vamos criar algo lindo juntos.",
+    "whatsappTitle": "Prefere WhatsApp?",
+    "whatsappDescription": "Manda uma mensagem direta e respondemos rapidinho.",
+    "whatsappCta": "Falar no WhatsApp",
+    "form": {
+      "name": "Seu Nome",
+      "namePlaceholder": "Maria Silva",
+      "email": "E-mail",
+      "emailPlaceholder": "maria@exemplo.com",
+      "phone": "Telefone / WhatsApp",
+      "phonePlaceholder": "+1 (555) 000-0000",
+      "basketType": "Tipo de Cesta",
+      "basketTypePlaceholder": "Selecione o tipo de cesta",
+      "basketTypeOptions": {
+        "breakfast": "Cesta de Café da Manhã",
+        "mothers-day": "Cesta Dia das Mães",
+        "birthday": "Cesta de Aniversário",
+        "custom": "Pedido Personalizado"
+      },
+      "message": "Conte sobre a ocasião",
+      "messagePlaceholder": "Data, nome do presenteado, preferências, orçamento, qualquer detalhe que ajude a criar algo perfeito...",
+      "submit": "Enviar Pedido",
+      "submitting": "Enviando...",
+      "successTitle": "Pedido recebido!",
+      "successMessage": "Entraremos em contato em até 24 horas para discutir os detalhes.",
+      "errorMessage": "Algo deu errado. Tente novamente ou entre em contato pelo WhatsApp."
+    }
+  },
+  "footer": {
+    "tagline": "Presentes Aconchegantes • Alegria Artesanal",
+    "description": "Cestas de presente e arranjos com balões feitos à mão para toda ocasião, entregues com amor na Central Florida.",
+    "contact": "Contato",
+    "rights": "Todos os direitos reservados.",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "madeWith": "Feito com"
+  },
+  "whatsapp": {
+    "tooltip": "Pedir pelo WhatsApp"
+  },
+  "validation": {
+    "nameRequired": "Nome é obrigatório",
+    "emailRequired": "E-mail é obrigatório",
+    "emailInvalid": "Informe um e-mail válido",
+    "basketTypeRequired": "Selecione o tipo de cesta",
+    "messageRequired": "Descreva a ocasião"
+  }
+}

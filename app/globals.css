@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Playfair Display';
+  --font-body: 'Lato';
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream-200 text-bark-800 font-body antialiased;
+  }
+
+  ::selection {
+    @apply bg-rust-400/20 text-rust-700;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-cream-200;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gold-400 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-rust-500;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-6 md:px-12 lg:px-20 xl:px-32;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-rust-600 hover:bg-rust-700 text-cream-100
+           font-body font-bold text-sm tracking-wide uppercase
+           px-7 py-3.5 rounded-full
+           transition-all duration-300 ease-out
+           hover:shadow-lg hover:-translate-y-0.5
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rust-500 focus-visible:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 border border-bark-700/30 hover:border-rust-500
+           text-bark-800 hover:text-rust-600
+           font-body font-normal text-sm tracking-wide
+           px-7 py-3.5 rounded-full
+           transition-all duration-300 ease-out
+           hover:-translate-y-0.5
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rust-500 focus-visible:ring-offset-2;
+  }
+
+  .input-field {
+    @apply w-full bg-cream-50 border border-cream-300 hover:border-gold-400 focus:border-rust-500
+           rounded-xl px-4 py-3 text-bark-800 placeholder-bark-700/40
+           font-body text-sm
+           transition-colors duration-200
+           outline-none focus:ring-2 focus:ring-rust-500/20;
+  }
+
+  .card-basket {
+    @apply bg-cream-50 rounded-2xl overflow-hidden
+           border border-cream-300/60
+           transition-all duration-300 ease-out
+           hover:shadow-xl hover:-translate-y-1 hover:border-gold-300;
+  }
+}
