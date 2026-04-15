@@ -16,7 +16,8 @@ const nextConfig = {
   basePath,
   trailingSlash: true,
   images: {
-    unoptimized: true,
+    loader: 'custom',
+    loaderFile: './imageLoader.mjs',
     formats: ['image/avif', 'image/webp'],
   },
 }

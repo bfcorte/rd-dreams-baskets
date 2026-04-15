@@ -36,6 +36,7 @@ jobs:
           # Set to '' if using a custom domain (e.g. rddreamsbaskets.com)
           # Set to '/rd-dreams-baskets' if using github.io/rd-dreams-baskets
           GITHUB_PAGES_BASE_PATH: '/rd-dreams-baskets'
+          NEXT_PUBLIC_BASE_PATH: '/rd-dreams-baskets'
           # Optional: add your Google Sheets webhook URL as a GitHub Secret
           # then uncomment the line below:
           # NEXT_PUBLIC_GOOGLE_SHEETS_WEBHOOK_URL: ${{ secrets.GOOGLE_SHEETS_WEBHOOK_URL }}
