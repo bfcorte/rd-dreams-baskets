@@ -1,7 +1,0 @@
-User-agent: *
-Allow: /
-
-# Block Next.js internals (already handled by basePath, but explicit is better)
-Disallow: /_next/
-
-Sitemap: https://bfcorte.github.io/rd-dreams-baskets/sitemap.xml

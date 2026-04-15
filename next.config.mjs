@@ -4,30 +4,19 @@ const withNextIntl = createNextIntlPlugin('./i18n/request.ts')
 
 const isProd = process.env.NODE_ENV === 'production'
 
-// Set to '' when using a custom domain (e.g. rddreamsbaskets.com)
-// Set to '/rd-dreams-baskets' for github.io/rd-dreams-baskets
-const basePath = (process.env.GITHUB_PAGES_BASE_PATH ?? '').trim()
+// GITHUB_PAGES_BASE_PATH is set in CI (e.g. '/rd-dreams-baskets')
+// Leave empty when using a custom domain
+const basePath = process.env.GITHUB_PAGES_BASE_PATH ?? ''
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Static export only in production (GitHub Pages)
-  // Dev mode keeps the Next.js server so middleware + i18n routing work
+  // Static export only in production builds (GitHub Pages)
+  // Dev mode uses the normal Next.js server + middleware (i18n routing works)
   ...(isProd ? { output: 'export' } : {}),
-
   basePath,
   trailingSlash: true,
-
-  // Expose basePath to the client-side image loader.
-  // next/image with unoptimized:true does NOT prepend basePath automatically —
-  // so imageLoader.mjs reads this value and prepends it instead.
-  env: {
-    NEXT_PUBLIC_BASE_PATH: basePath,
-  },
-
   images: {
-    // Custom loader handles basePath + skips server-side optimization
-    // (required for output:'export' — no image optimization server available)
-    loaderFile: './imageLoader.mjs',
+    unoptimized: true,
     formats: ['image/avif', 'image/webp'],
   },
 }
