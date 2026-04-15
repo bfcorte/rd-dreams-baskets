@@ -35,28 +35,9 @@ export default async function LocaleLayout({
   setRequestLocale(locale)
   const messages = await getMessages()
 
-  // Root layout already provides <html><body>.
-  // This layout only adds the i18n Provider + sets lang via script.
   return (
-    <>
-      <LangSetter locale={locale} />
-      <NextIntlClientProvider messages={messages}>
-        {children}
-      </NextIntlClientProvider>
-    </>
-  )
-}
-
-// Sets the <html lang> attribute client-side to match the active locale.
-// Uses suppressHydrationWarning on <html> so this never causes a mismatch.
-function LangSetter({ locale }: { locale: string }) {
-  const lang = locale === 'BR' ? 'pt-BR' : 'en-US'
-  return (
-    <script
-      suppressHydrationWarning
-      dangerouslySetInnerHTML={{
-        __html: `document.documentElement.lang='${lang}'`,
-      }}
-    />
+    <NextIntlClientProvider messages={messages}>
+      {children}
+    </NextIntlClientProvider>
   )
 }
