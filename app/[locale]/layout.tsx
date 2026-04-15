@@ -36,8 +36,12 @@ export default async function LocaleLayout({
   const messages = await getMessages()
 
   return (
-    <NextIntlClientProvider messages={messages}>
-      {children}
-    </NextIntlClientProvider>
+    <html lang={locale === 'BR' ? 'pt-BR' : 'en-US'}>
+      <body>
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
+      </body>
+    </html>
   )
 }
