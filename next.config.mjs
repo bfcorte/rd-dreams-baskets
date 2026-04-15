@@ -2,17 +2,21 @@ import createNextIntlPlugin from 'next-intl/plugin'
 
 const withNextIntl = createNextIntlPlugin('./i18n/request.ts')
 
+const isProd = process.env.NODE_ENV === 'production'
+
 // GITHUB_PAGES_BASE_PATH is set in CI (e.g. '/rd-dreams-baskets')
 // Leave empty when using a custom domain
 const basePath = process.env.GITHUB_PAGES_BASE_PATH ?? ''
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',       // Static export for GitHub Pages
+  // Static export only in production builds (GitHub Pages)
+  // Dev mode uses the normal Next.js server + middleware (i18n routing works)
+  ...(isProd ? { output: 'export' } : {}),
   basePath,
-  trailingSlash: true,    // Required for GitHub Pages (serves index.html)
+  trailingSlash: true,
   images: {
-    unoptimized: true,    // Required for static export (no image optimization server)
+    unoptimized: true,
     formats: ['image/avif', 'image/webp'],
   },
 }
