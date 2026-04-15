@@ -24,7 +24,7 @@
 
   /* Custom scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
   }
   ::-webkit-scrollbar-track {
     @apply bg-cream-200;
@@ -34,6 +34,14 @@
   }
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-rust-500;
+  }
+
+  /* Minimal dark mode — preserves brand warmth */
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #1C1208;
+      color: #F5EFE0;
+    }
   }
 }
 
@@ -73,6 +81,26 @@
     @apply bg-cream-50 rounded-2xl overflow-hidden
            border border-cream-300/60
            transition-all duration-300 ease-out
-           hover:shadow-xl hover:-translate-y-1 hover:border-gold-300;
+           hover:shadow-xl hover:-translate-y-1.5 hover:border-gold-300;
   }
+}
+
+@layer utilities {
+  /* Animation delay utilities — for stagger effects */
+  .anim-delay-100  { animation-delay: 0.10s; }
+  .anim-delay-150  { animation-delay: 0.15s; }
+  .anim-delay-200  { animation-delay: 0.20s; }
+  .anim-delay-250  { animation-delay: 0.25s; }
+  .anim-delay-300  { animation-delay: 0.30s; }
+  .anim-delay-350  { animation-delay: 0.35s; }
+  .anim-delay-400  { animation-delay: 0.40s; }
+  .anim-delay-500  { animation-delay: 0.50s; }
+  .anim-delay-600  { animation-delay: 0.60s; }
+  .anim-delay-700  { animation-delay: 0.70s; }
+  .anim-delay-800  { animation-delay: 0.80s; }
+  .anim-delay-900  { animation-delay: 0.90s; }
+  .anim-delay-1000 { animation-delay: 1.00s; }
+  .anim-delay-1500 { animation-delay: 1.50s; }
+  .anim-delay-2000 { animation-delay: 2.00s; }
+  .anim-delay-2500 { animation-delay: 2.50s; }
 }

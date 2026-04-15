@@ -62,15 +62,12 @@ export default function Navigation({ locale }: { locale: string }) {
 
         {/* Actions */}
         <div className="hidden md:flex items-center gap-3">
-          {/* Language switcher */}
           <Link
             href={`/${otherLocale}`}
             className="text-xs font-body font-bold tracking-widest text-bark-700/60 hover:text-rust-600 border border-bark-700/20 hover:border-rust-400 px-3 py-1.5 rounded-full transition-all duration-200"
           >
             {t('switchLang')}
           </Link>
-
-          {/* WhatsApp CTA */}
           <a
             href={WHATSAPP_URL}
             target="_blank"
@@ -87,28 +84,43 @@ export default function Navigation({ locale }: { locale: string }) {
           onClick={() => setOpen(!open)}
           className="md:hidden p-2 text-bark-800 hover:text-rust-600 transition-colors"
           aria-label="Toggle menu"
+          aria-expanded={open}
         >
           {open ? <XIcon /> : <MenuIcon />}
         </button>
       </nav>
 
-      {/* Mobile menu */}
-      {open && (
-        <div className="md:hidden bg-cream-100/98 backdrop-blur-md border-t border-cream-300/50 px-6 py-6 flex flex-col gap-4">
-          <a href="#baskets"    onClick={() => setOpen(false)} className="text-bark-800 font-body py-2 border-b border-cream-300/60">{t('baskets')}</a>
+      {/* Mobile menu — smooth slide-down via max-height transition */}
+      <div
+        className={clsx(
+          'md:hidden bg-cream-100/98 backdrop-blur-md border-t border-cream-300/50 overflow-hidden',
+          'transition-all duration-300 ease-out',
+          open ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
+        )}
+      >
+        <div className="px-6 py-6 flex flex-col gap-4">
+          <a href="#baskets"      onClick={() => setOpen(false)} className="text-bark-800 font-body py-2 border-b border-cream-300/60">{t('baskets')}</a>
           <a href="#how-it-works" onClick={() => setOpen(false)} className="text-bark-800 font-body py-2 border-b border-cream-300/60">{t('howItWorks')}</a>
-          <a href="#contact"   onClick={() => setOpen(false)} className="text-bark-800 font-body py-2 border-b border-cream-300/60">{t('contact')}</a>
+          <a href="#contact"      onClick={() => setOpen(false)} className="text-bark-800 font-body py-2 border-b border-cream-300/60">{t('contact')}</a>
           <div className="flex items-center gap-3 pt-2">
-            <Link href={`/${otherLocale}`} className="text-xs font-body font-bold tracking-widest text-bark-700/60 border border-bark-700/20 px-3 py-1.5 rounded-full">
+            <Link
+              href={`/${otherLocale}`}
+              className="text-xs font-body font-bold tracking-widest text-bark-700/60 border border-bark-700/20 px-3 py-1.5 rounded-full"
+            >
               {t('switchLang')}
             </Link>
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-primary text-xs flex-1 justify-center">
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary text-xs flex-1 justify-center"
+            >
               <WhatsAppIcon className="w-4 h-4" />
               {t('orderWhatsApp')}
             </a>
           </div>
         </div>
-      )}
+      </div>
     </header>
   )
 }

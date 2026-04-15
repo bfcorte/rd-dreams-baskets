@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const WHATSAPP_URL = 'https://wa.me/13218065340'
 
@@ -56,13 +57,13 @@ export default function Footer() {
           <div className="flex flex-col gap-3">
             <h4 className="font-body text-xs font-bold tracking-widest uppercase text-cream-300/40 mb-1">Language</h4>
             <div className="flex gap-3">
-              <a href="/USA" className="text-sm font-body text-cream-200/80 hover:text-gold-400 transition-colors">
+              <Link href="/USA" className="text-sm font-body text-cream-200/80 hover:text-gold-400 transition-colors">
                 🇺🇸 English
-              </a>
+              </Link>
               <span className="text-cream-300/20">·</span>
-              <a href="/BR" className="text-sm font-body text-cream-200/80 hover:text-gold-400 transition-colors">
+              <Link href="/BR" className="text-sm font-body text-cream-200/80 hover:text-gold-400 transition-colors">
                 🇧🇷 Português
-              </a>
+              </Link>
             </div>
           </div>
         </div>
