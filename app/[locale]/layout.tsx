@@ -16,7 +16,6 @@ export async function generateMetadata({
     title: 'R&D Dreams & Baskets — Cozy Gifts, Handcrafted Joy',
     description: t('subheadline'),
     alternates: {
-      canonical: `/${locale}`,
       languages: {
         'en-US': '/USA',
         'pt-BR': '/BR',
@@ -38,7 +37,6 @@ export default async function LocaleLayout({
 }) {
   if (!locales.includes(locale)) notFound()
 
-  // Enable static rendering for all locales
   setRequestLocale(locale)
 
   const messages = await getMessages()

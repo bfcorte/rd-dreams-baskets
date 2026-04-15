@@ -2,20 +2,12 @@
 
 import { useEffect } from 'react'
 
-// Root path → redirect to English (USA)
-// Client-side redirect needed for static export compatibility
+// Root path (/) → redirects to English by default
 export default function RootPage() {
   useEffect(() => {
     window.location.replace('/USA')
   }, [])
 
-  return (
-    <html>
-      <head>
-        <meta httpEquiv="refresh" content="0; url=/USA" />
-        <title>R&D Dreams &amp; Baskets</title>
-      </head>
-      <body />
-    </html>
-  )
+  // Minimal fallback while redirect fires
+  return null
 }
