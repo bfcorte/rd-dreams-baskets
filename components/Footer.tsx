@@ -56,13 +56,17 @@ export default function Footer() {
           {/* Lang switcher */}
           <div className="flex flex-col gap-3">
             <h4 className="font-body text-xs font-bold tracking-widest uppercase text-cream-300/40 mb-1">Language</h4>
-            <div className="flex gap-3">
+            <div className="flex gap-3 flex-wrap">
               <Link href="/USA" className="text-sm font-body text-cream-200/80 hover:text-gold-400 transition-colors">
                 🇺🇸 English
               </Link>
               <span className="text-cream-300/20">·</span>
               <Link href="/BR" className="text-sm font-body text-cream-200/80 hover:text-gold-400 transition-colors">
                 🇧🇷 Português
+              </Link>
+              <span className="text-cream-300/20">·</span>
+              <Link href="/ES" className="text-sm font-body text-cream-200/80 hover:text-gold-400 transition-colors">
+                🇪🇸 Español
               </Link>
             </div>
           </div>

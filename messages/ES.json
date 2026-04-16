@@ -1,0 +1,121 @@
+{
+  "nav": {
+    "baskets": "Cestas",
+    "howItWorks": "Cómo Funciona",
+    "contact": "Contacto",
+    "orderWhatsApp": "Pedir por WhatsApp",
+    "switchLang": "EN"
+  },
+  "hero": {
+    "badge": "Hecho con Amor • Central Florida",
+    "headline": "Momentos que\nValen la Pena",
+    "subheadline": "Hermosas cestas de regalo y arreglos con globos para cada ocasión — porque algunos momentos merecen ser inolvidables.",
+    "ctaPrimary": "Pedir por WhatsApp",
+    "ctaSecondary": "Solicitar Presupuesto"
+  },
+  "products": {
+    "title": "Nuestras Colecciones",
+    "subtitle": "Cada cesta está hecha a mano con cariño, llena de artículos premium y entregada con amor.",
+    "badge": {
+      "bestseller": "Más Vendido",
+      "seasonal": "Temporada",
+      "popular": "Popular"
+    },
+    "items": [
+      {
+        "id": "breakfast",
+        "name": "Cestas de Desayuno",
+        "description": "Comienza su mañana con calidez — café, pasteles, flores frescas y muchísimo amor.",
+        "badge": "bestseller"
+      },
+      {
+        "id": "mothers-day",
+        "name": "Día de la Madre",
+        "description": "Honra a la mujer que lo hace todo con una cesta tan hermosa y extraordinaria como ella.",
+        "badge": "seasonal"
+      },
+      {
+        "id": "birthday",
+        "name": "Cumpleaños",
+        "description": "Haz que cada cumpleaños sea extraordinario con una cesta personalizada y un arreglo de globos.",
+        "badge": null
+      },
+      {
+        "id": "custom",
+        "name": "Arreglos Personalizados",
+        "description": "Tu visión, bellamente elaborada. Creamos cestas pensadas en lo que hace sonreír a cada persona.",
+        "badge": "popular"
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Cómo Funciona",
+    "subtitle": "Tres pasos simples para el regalo perfecto.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Elige tu Cesta",
+        "description": "Explora nuestras colecciones o describe tu visión para una creación completamente personalizada."
+      },
+      {
+        "number": "02",
+        "title": "Personalízala",
+        "description": "Añade una nota escrita a mano, elige un tema o solicita artículos específicos — la hacemos tuya."
+      },
+      {
+        "number": "03",
+        "title": "Entregada con Amor",
+        "description": "Recibe tu cesta artesanal, hermosamente empaquetada y lista para crear un recuerdo duradero."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Solicita tu Cesta",
+    "subtitle": "Cuéntanos sobre la ocasión y crearemos algo hermoso juntos.",
+    "whatsappTitle": "¿Prefieres WhatsApp?",
+    "whatsappDescription": "Envíanos un mensaje directo y te responderemos enseguida.",
+    "whatsappCta": "Chatear en WhatsApp",
+    "form": {
+      "name": "Tu Nombre",
+      "namePlaceholder": "María García",
+      "email": "Correo Electrónico",
+      "emailPlaceholder": "maria@ejemplo.com",
+      "phone": "Teléfono / WhatsApp",
+      "phonePlaceholder": "+1 (555) 000-0000",
+      "basketType": "Tipo de Cesta",
+      "basketTypePlaceholder": "Selecciona un tipo de cesta",
+      "basketTypeOptions": {
+        "breakfast": "Cesta de Desayuno",
+        "mothers-day": "Cesta Día de la Madre",
+        "birthday": "Cesta de Cumpleaños",
+        "custom": "Arreglo Personalizado"
+      },
+      "message": "Cuéntanos sobre la ocasión",
+      "messagePlaceholder": "Fecha, nombre del destinatario, preferencias, presupuesto, cualquier detalle que nos ayude a crear algo perfecto...",
+      "submit": "Enviar Solicitud",
+      "submitting": "Enviando...",
+      "successTitle": "¡Solicitud recibida!",
+      "successMessage": "Nos pondremos en contacto en 24 horas para hablar sobre los detalles.",
+      "errorMessage": "Algo salió mal. Inténtalo de nuevo o contáctanos por WhatsApp."
+    }
+  },
+  "footer": {
+    "tagline": "Regalos Acogedores • Alegría Artesanal",
+    "description": "Cestas de regalo artesanales y arreglos con globos para cada ocasión, entregados con amor en Central Florida.",
+    "contact": "Contacto",
+    "rights": "Todos los derechos reservados.",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "madeWith": "Hecho con"
+  },
+  "whatsapp": {
+    "tooltip": "Pedir por WhatsApp"
+  },
+  "validation": {
+    "nameRequired": "El nombre es obligatorio",
+    "emailRequired": "El correo es obligatorio",
+    "emailInvalid": "Ingresa un correo válido",
+    "basketTypeRequired": "Por favor selecciona un tipo de cesta",
+    "messageRequired": "Por favor describe tu ocasión"
+  }
+}

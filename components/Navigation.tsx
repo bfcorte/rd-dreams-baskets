@@ -8,6 +8,14 @@ import clsx from 'clsx'
 
 const WHATSAPP_URL = 'https://wa.me/13218065340'
 
+const LOCALE_META: Record<string, { flag: string; label: string }> = {
+  USA: { flag: '🇺🇸', label: 'EN' },
+  BR:  { flag: '🇧🇷', label: 'PT' },
+  ES:  { flag: '🇪🇸', label: 'ES' },
+}
+
+const ALL_LOCALES = ['USA', 'BR', 'ES']
+
 export default function Navigation({ locale }: { locale: string }) {
   const t = useTranslations('nav')
   const [scrolled, setScrolled] = useState(false)
@@ -19,7 +27,7 @@ export default function Navigation({ locale }: { locale: string }) {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const otherLocale = locale === 'USA' ? 'BR' : 'USA'
+  const otherLocales = ALL_LOCALES.filter(l => l !== locale)
 
   return (
     <header
@@ -60,14 +68,21 @@ export default function Navigation({ locale }: { locale: string }) {
           })}
         </ul>
 
-        {/* Actions */}
-        <div className="hidden md:flex items-center gap-3">
-          <Link
-            href={`/${otherLocale}`}
-            className="text-xs font-body font-bold tracking-widest text-bark-700/60 hover:text-rust-600 border border-bark-700/20 hover:border-rust-400 px-3 py-1.5 rounded-full transition-all duration-200"
-          >
-            {t('switchLang')}
-          </Link>
+        {/* Desktop actions */}
+        <div className="hidden md:flex items-center gap-2">
+          {otherLocales.map(loc => {
+            const { flag, label } = LOCALE_META[loc]
+            return (
+              <Link
+                key={loc}
+                href={`/${loc}`}
+                className="flex items-center gap-1.5 text-xs font-body font-bold tracking-widest text-bark-700/60 hover:text-rust-600 border border-bark-700/20 hover:border-rust-400 px-3 py-1.5 rounded-full transition-all duration-200"
+              >
+                <span>{flag}</span>
+                <span>{label}</span>
+              </Link>
+            )
+          })}
           <a
             href={WHATSAPP_URL}
             target="_blank"
@@ -102,13 +117,20 @@ export default function Navigation({ locale }: { locale: string }) {
           <a href="#baskets"      onClick={() => setOpen(false)} className="text-bark-800 font-body py-2 border-b border-cream-300/60">{t('baskets')}</a>
           <a href="#how-it-works" onClick={() => setOpen(false)} className="text-bark-800 font-body py-2 border-b border-cream-300/60">{t('howItWorks')}</a>
           <a href="#contact"      onClick={() => setOpen(false)} className="text-bark-800 font-body py-2 border-b border-cream-300/60">{t('contact')}</a>
-          <div className="flex items-center gap-3 pt-2">
-            <Link
-              href={`/${otherLocale}`}
-              className="text-xs font-body font-bold tracking-widest text-bark-700/60 border border-bark-700/20 px-3 py-1.5 rounded-full"
-            >
-              {t('switchLang')}
-            </Link>
+          <div className="flex items-center gap-2 pt-2 flex-wrap">
+            {otherLocales.map(loc => {
+              const { flag, label } = LOCALE_META[loc]
+              return (
+                <Link
+                  key={loc}
+                  href={`/${loc}`}
+                  className="flex items-center gap-1.5 text-xs font-body font-bold tracking-widest text-bark-700 border border-bark-700/40 hover:text-rust-600 hover:border-rust-400 px-3 py-1.5 rounded-full transition-all duration-200"
+                >
+                  <span>{flag}</span>
+                  <span>{label}</span>
+                </Link>
+              )
+            })}
             <a
               href={WHATSAPP_URL}
               target="_blank"

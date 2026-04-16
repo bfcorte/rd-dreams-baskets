@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server'
 
-const locales = ['USA', 'BR']
+const locales = ['USA', 'BR', 'ES']
 
 export async function generateMetadata({
   params: { locale },
@@ -15,7 +15,7 @@ export async function generateMetadata({
     title: 'R&D Dreams & Baskets — Cozy Gifts, Handcrafted Joy',
     description: t('subheadline'),
     alternates: {
-      languages: { 'en-US': '/USA', 'pt-BR': '/BR' },
+      languages: { 'en-US': '/USA', 'pt-BR': '/BR', 'es': '/ES' },
     },
   }
 }
@@ -36,7 +36,7 @@ export default async function LocaleLayout({
   const messages = await getMessages()
 
   return (
-    <html lang={locale === 'BR' ? 'pt-BR' : 'en-US'}>
+    <html lang={locale === 'BR' ? 'pt-BR' : locale === 'ES' ? 'es' : 'en-US'}>
       <body>
         <NextIntlClientProvider messages={messages}>
           {children}
